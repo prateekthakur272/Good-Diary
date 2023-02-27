@@ -2,4 +2,5 @@
     <string name="app_name">Good Diary</string>
     <string name="search">Search</string>
     <string name="add_page">Add page</string>
+    <string name="navigation_menu">navigation_menu</string>
 </resources>

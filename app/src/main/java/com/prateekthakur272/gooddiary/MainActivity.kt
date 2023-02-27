@@ -23,5 +23,8 @@ class MainActivity : AppCompatActivity() {
             Page("title","hello"),
         ))
         binding.pageRecyclerView.layoutManager = LinearLayoutManager(this)
+        binding.searchBar.buttonNavigationMenu.setOnClickListener {
+            binding.navigationDrawer.openDrawer(binding.mainNavigationView)
+        }
     }
 }

@@ -23,6 +23,16 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
+        <include
+            android:id="@+id/search_bar"
+            layout="@layout/search_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/button_add_page"
             android:layout_width="wrap_content"
@@ -43,22 +53,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/search_bar"
             tools:listitem="@layout/page_item_layout" />
-
-        <EditText
-            android:id="@+id/search_bar"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_margin="16dp"
-            android:autofillHints="none"
-            android:background="@drawable/search_bar_view_background"
-            android:drawableStart="@drawable/ic_menu"
-            android:drawablePadding="8dp"
-            android:hint="@string/search"
-            android:inputType="text"
-            android:paddingHorizontal="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
