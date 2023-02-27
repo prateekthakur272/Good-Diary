@@ -25,7 +25,9 @@
         app:layout_constraintTop_toTopOf="parent"
         android:hint="@string/search"
         android:background="@drawable/search_bar_view_background"
-        android:autofillHints="none" />
+        android:autofillHints="none"
+        android:inputType="text"
+        android:lines="1"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
