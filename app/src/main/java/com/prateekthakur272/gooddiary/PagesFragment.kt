@@ -8,13 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.prateekthakur272.gooddiary.adapter.PageAdapter
-import com.prateekthakur272.gooddiary.data.Page
 import com.prateekthakur272.gooddiary.databinding.FragmentPagesBinding
 
 class PagesFragment : Fragment() {
     private lateinit var binding: FragmentPagesBinding
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentPagesBinding.inflate(inflater,container,false)
         binding.pageRecyclerView.adapter = PageAdapter(arrayListOf())
         binding.pageRecyclerView.layoutManager = LinearLayoutManager(context)
