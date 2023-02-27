@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+    <item android:title="All Diaries">
+        <menu>
+            <item android:title="Create New Diary"
+                android:icon="@drawable/ic_add"/>
+        </menu>
+    </item>
+    <item android:title="About app">
+        <menu>
+            <item android:title="Version 1.0"
+                android:icon="@drawable/ic_version"/>
+        </menu>
+    </item>
 </menu>
