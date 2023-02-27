@@ -6,21 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/search_bar"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_margin="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/search_bar_view_background"
-        android:drawableStart="@drawable/ic_menu"
-        android:drawablePadding="8dp"
-        android:hint="@string/search"
-        android:inputType="text"
-        android:paddingHorizontal="8dp"
-        android:autofillHints="none" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/button_add_page"
@@ -34,6 +19,7 @@
         android:contentDescription="@string/add_page"/>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pageRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,7 +36,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:menu="@menu/main_navigation_menu"
-        android:visibility="gone"
-        />
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/search_bar_view_background"
+        android:drawableStart="@drawable/ic_menu"
+        android:drawablePadding="8dp"
+        android:hint="@string/search"
+        android:inputType="text"
+        android:paddingHorizontal="8dp"
+        android:autofillHints="none" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
