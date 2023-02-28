@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="All Diaries">
+    <item android:title="@string/all_diaries"
+        android:id="@+id/all_diaries">
         <menu>
-            <item android:title="Create New Diary"
-                android:icon="@drawable/ic_add"/>
+            <item android:title="@string/create_new_diary"
+                android:icon="@drawable/ic_add"
+                android:id="@+id/create_new_diary"/>
         </menu>
     </item>
-    <item android:title="About app">
+    <item android:title="@string/about_app">
         <menu>
-            <item android:title="Version 1.0"
+            <item android:title="@string/version"
                 android:icon="@drawable/ic_version"/>
         </menu>
     </item>
