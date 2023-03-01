@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/diary"
+        android:layout_gravity="center"
+        android:contentDescription="@string/image" />
+
+    <EditText
+        android:id="@+id/diary_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/diary_name"
+        android:background="@drawable/search_bar_view_background"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:autofillHints="none"
+        android:inputType="text"/>
+
+    <Button
+        android:id="@+id/button_create_diary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/search_bar_view_background"
+        android:text = "@string/create_diary"/>
+
+</LinearLayout>

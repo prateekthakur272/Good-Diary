@@ -9,18 +9,23 @@ import com.prateekthakur272.gooddiary.data.Page
 class MainViewModel(application: Application) :AndroidViewModel(application){
     private var dataHelper: DataHelper = DataHelper(getApplication())
     var allDiaries:MutableLiveData<ArrayList<String>>
-    var currentDiaryName:String
+    var currentDiaryName:MutableLiveData<String>
     var currentDiary:MutableLiveData<ArrayList<Page>>
     init {
         if (!dataHelper.getDiaries().contains("Notes"))
             dataHelper.createDiary("Notes")
         allDiaries = MutableLiveData(dataHelper.getDiaries())
-        currentDiaryName = allDiaries.value?.getOrNull(0) ?: ""
-        currentDiary = MutableLiveData(dataHelper.getPages(currentDiaryName))
+        currentDiaryName = MutableLiveData(allDiaries.value?.getOrNull(0) ?: "")
+        currentDiary = MutableLiveData(dataHelper.getPages(currentDiaryName.value!!))
     }
 
     fun loadDiary(name:String){
-        currentDiaryName = name
+        currentDiaryName.value = name
         currentDiary.value = dataHelper.getPages(name)
+    }
+
+    fun createDiary(name:String){
+        dataHelper.createDiary(name)
+        allDiaries.value = dataHelper.getDiaries()
     }
 }
