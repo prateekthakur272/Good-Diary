@@ -14,15 +14,16 @@ class DataHelper(context: Context) {
         if (file.exists())
             return false
         file.createNewFile()
+        file.writeText("[]")
         return true
     }
 
-    fun getDiaries(): Array<out File> {
-        return directory.listFiles()?: arrayOf()
+    fun getDiaries(): List<String> {
+        return directory.listFiles()?.map { it.name.removeSuffix(".json") } ?: listOf()
     }
 
     fun createPage(title:String,content:String,diary:String){
-        val file = File("${directory.absolutePath}/$diary")
+        val file = File("${directory.absolutePath}/$diary.json")
         if (file.exists()){
             val gson = Gson()
             val pages = getPages(diary)
@@ -31,8 +32,8 @@ class DataHelper(context: Context) {
         }
     }
 
-    fun getPages(diary: String): java.util.ArrayList<Page>{
-        val file = File("${directory.absolutePath}/$diary")
+    fun getPages(diary: String):ArrayList<Page>{
+        val file = File("${directory.absolutePath}/$diary.json")
         if (file.exists()){
             val gson = Gson()
             return gson.fromJson(file.readText(),object:TypeToken<ArrayList<Page>>(){}.type)
