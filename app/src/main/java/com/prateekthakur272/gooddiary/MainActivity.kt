@@ -102,9 +102,10 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
             findViewById<Button>(R.id.button_create_diary).setOnClickListener {
                 val diaryName = findViewById<EditText>(R.id.diary_name).text.toString()
                 if (diaryName.isNotBlank()){
-                viewModel.createDiary(diaryName)
-                viewModel.currentDiaryName.value = diaryName
-                binding.mainNavigationView.menu[0].subMenu?.add(Menu.NONE,viewModel.allDiaries.value!!.size - 1,Menu.NONE,diaryName)
+                    viewModel.createDiary(diaryName)
+                    viewModel.currentDiaryName.value = diaryName
+                    viewModel.loadDiary(diaryName)
+                    binding.mainNavigationView.menu[0].subMenu?.add(Menu.NONE,viewModel.allDiaries.value!!.size - 1,Menu.NONE,diaryName)
                 }else{
                     Toast.makeText(this@MainActivity,"Cannot create diary without name",Toast.LENGTH_SHORT).show()
                 }
@@ -115,5 +116,10 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
             }
             show()
         }
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        viewModel.loadDiary(viewModel.currentDiaryName.value!!)
     }
 }

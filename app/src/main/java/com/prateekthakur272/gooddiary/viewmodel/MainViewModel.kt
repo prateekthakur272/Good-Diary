@@ -8,7 +8,7 @@ import com.prateekthakur272.gooddiary.data.Page
 
 class MainViewModel(application: Application) :AndroidViewModel(application){
     private var dataHelper: DataHelper = DataHelper(getApplication())
-    var allDiaries:MutableLiveData<ArrayList<String>>
+    var allDiaries:MutableLiveData<List<String>>
     var currentDiaryName:MutableLiveData<String>
     var currentDiary:MutableLiveData<ArrayList<Page>>
     init {
