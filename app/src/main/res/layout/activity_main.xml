@@ -58,7 +58,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/search_bar"
             app:layout_constraintBottom_toBottomOf="@id/button_add_page"
-            android:visibility="visible"
+            android:visibility="gone"
             android:gravity="center">
 
             <TextView

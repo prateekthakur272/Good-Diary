@@ -18,8 +18,8 @@ class DataHelper(context: Context) {
         return true
     }
 
-    fun getDiaries(): ArrayList<String> {
-        return (directory.listFiles()?.map { it.name.removeSuffix(".json") } as ArrayList)
+    fun getDiaries(): List<String> {
+        return (directory.listFiles()?.map { it.name.removeSuffix(".json") } ?: listOf())
     }
 
     fun createPage(page: Page){
