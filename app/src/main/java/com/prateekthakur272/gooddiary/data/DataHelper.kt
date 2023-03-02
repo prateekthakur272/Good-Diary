@@ -40,4 +40,11 @@ class DataHelper(context: Context) {
         }
         return arrayListOf()
     }
+
+    fun deleteDiary(name:String){
+        val file = File("${directory.absolutePath}/${name}.json")
+        if (!file.exists())
+            return
+        file.delete()
+    }
 }
