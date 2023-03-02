@@ -49,6 +49,35 @@
             app:layout_constraintTop_toBottomOf="@+id/search_bar"
             tools:listitem="@layout/page_item_layout"/>
 
+        <LinearLayout
+            android:id="@+id/create_first_diary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/search_bar"
+            app:layout_constraintBottom_toBottomOf="@id/button_add_page"
+            android:visibility="visible"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="@string/there_is_no_diary_created_create_one"/>
+
+            <Button
+                android:id="@+id/button_create_first_diary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/search_bar_view_background"
+                android:text="@string/create_diary"/>
+
+        </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView
