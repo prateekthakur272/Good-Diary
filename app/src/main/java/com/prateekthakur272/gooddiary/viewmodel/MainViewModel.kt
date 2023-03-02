@@ -28,4 +28,8 @@ class MainViewModel(application: Application) :AndroidViewModel(application){
         dataHelper.createDiary(name)
         allDiaries.value = dataHelper.getDiaries()
     }
+    fun deleteDiary(name:String){
+        dataHelper.deleteDiary(name)
+        allDiaries.value = dataHelper.getDiaries()
+    }
 }
