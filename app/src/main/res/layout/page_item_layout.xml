@@ -19,7 +19,7 @@
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Title"
+            android:text="@string/title"
             android:textStyle="bold"
             android:textSize="20sp"/>
 
@@ -27,14 +27,14 @@
             android:id="@+id/date_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Date Time"
+            android:text="@string/date_time"
             android:textSize="16sp"/>
 
         <TextView
             android:id="@+id/preview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="This is preview of page"
+            android:text="@string/this_is_preview_of_page"
             android:textSize="18sp"/>
 
     </LinearLayout>

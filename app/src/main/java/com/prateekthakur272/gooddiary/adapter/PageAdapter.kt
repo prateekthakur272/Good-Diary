@@ -23,6 +23,7 @@ class PageAdapter(private val pages:ArrayList<Page>):RecyclerView.Adapter<PageAd
         with(binding){
             title.text = pages[position].title
             dateTime.text = pages[position].date.toString()
+            preview.text = if (pages[position].content.length <= 24) pages[position].content else pages[position].content.substring(0..21)+"..."
         }
     }
 }
